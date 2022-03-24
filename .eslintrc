@@ -46,6 +46,8 @@
             "ts": "never",
             "tsx": "never"
          }
-      ]
+      ],
+      "no-restricted-exports": "off",
+      "import/prefer-default-export": "off"
    }
 }

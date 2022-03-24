@@ -11,11 +11,16 @@ export default defineConfig(() => ({
    },
    build: {
       lib: {
-         entry: path.resolve(__dirname, 'src/main.tsx'),
+         entry: path.resolve(__dirname, 'src/components/index.ts'),
          formats: ['es'],
+         fileName: 'index',
       },
+      input: ['src/components/index.ts'],
       rollupOptions: {
          external: isExternal,
+         output: {
+            preserveModules: true,
+         },
       },
    },
    plugins: [dts()],
